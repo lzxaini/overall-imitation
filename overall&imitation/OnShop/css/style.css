@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 12px;
+	color: #555555;
+}
+a{
+	color: black;
+	text-decoration: none
+}
+/*弹性盒子布局*/
+/*内容对齐（justify-content）属性应用在弹性容器上，
+*把弹性项沿着弹性容器的主轴线（main axis）对齐。
+*space-between：弹性项目平均分布在该行上。
+*背景渐变色从上向下渐变
+*/
+header{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	min-width: 1200px;
+	height: 35px;
+	line-height: 35px;
+	background: linear-gradient(to bottom,#c1c1c1,#f4f4f4,#f5f5f5);
+}
+/*送货位置，定位样式*/
+.site{
+	margin-left: 30px;
+	height: 35px;
+}
+/*整个用户栏设置样式*/
+.user{
+	width: 607px;
+	height: 35px;
+	margin-right: 50px;
+}
+/*用户信息设置及下拉栏样式*/
+.up-nav{
+	display: inline-block;
+}
+.up-img{
+	background: url(../images/t_arrow.gif) no-repeat 50px 15px;
+}
+/*flex-wrap 属性用于指定弹性盒子的子元素换行方式。*/
+.up-nav>ul{
+	display: flex;
+	flex-wrap: nowrap;
+	list-style: none;
+}
+.up-nav>ul>li{
+	margin-left: 10px;
+}
+.user-up-nav{
+	position: relative;
+}
+.user-up-nav ul{
+	position: absolute;
+	left: -50px;
+	width: 150px;
+	height: 100px;
+	display: none;
+	text-align: center;
+	list-style: none;
+	background-color: #FFF;
+	box-shadow: 2px 2px 2px 3px #ccc;
+}
+/*默认隐藏样式*/
+.user-up-nav li{
+	display: none;
+}
+/*鼠标停留显示样式*/
+.user-up-nav:hover ul{
+	display: block;
+}
+/*鼠标停留显示样式*/
+.user-up-nav:hover li{
+	display: block;
+}
+/*关注及其客服帮助栏样式*/
+.attention{
+	width: 55px;
+	height: 35px;
+	overflow: hidden;
+	position: relative;
+}
+.attention>.wb{
+	position: absolute;
+	background: url(../images/sh1.png) no-repeat center;
+}
+.attention>.wx{
+	position: absolute;
+	left: 25px;
+	background: url(../images/sh2.png) no-repeat center;
+}
+.attention a{
+    width: 20px;
+    height: 35px;
+    line-height: 35px;
+}
